@@ -3,10 +3,8 @@ package com.WebDriverBasic;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-// launch Browser
-public class LaunchFirefox {
+public class TitleVerify {
     public static void main(String[] args) {
-
         //Implement WebDriver
         WebDriver driver; // WebDriver=Selenium Interface; driver=reference variable
 
@@ -19,8 +17,18 @@ public class LaunchFirefox {
         //Open Test URL/Site
         driver.get("https://www.google.com");
 
-        driver.close(); // Active tab shut down
+        String expectedTitle="Google";
+        String actualTitle=driver.getTitle();
 
-      //  driver.quit(); // Shut down full browser.
+        // Verify
+        if(actualTitle.equals(expectedTitle)){
+            System.out.println("Title Matched.");
+        }
+        else{
+            System.out.println("Title not match. Actual Title is: "+actualTitle+".Expected Title is: "+expectedTitle);
+        }
+
+        driver.quit();
+
     }
 }

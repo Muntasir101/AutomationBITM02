@@ -1,12 +1,11 @@
 package com.WebDriverBasic;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-// launch Browser
-public class LaunchFirefox {
+public class BrowserSize {
     public static void main(String[] args) {
-
         //Implement WebDriver
         WebDriver driver; // WebDriver=Selenium Interface; driver=reference variable
 
@@ -19,8 +18,17 @@ public class LaunchFirefox {
         //Open Test URL/Site
         driver.get("https://www.google.com");
 
-        driver.close(); // Active tab shut down
+        //Get Browser size
+        Dimension browserSize= driver.manage().window().getSize(); //(1382, 744)
+        System.out.println("Maximum Browser Size: "+browserSize);
 
-      //  driver.quit(); // Shut down full browser.
+        //Set Browser Size
+        driver.manage().window().setSize(new Dimension(800,400));
+
+        //Verify Set Size
+        Dimension customBrowserSize= driver.manage().window().getSize();
+        System.out.println("Custom Browser Size: "+customBrowserSize);
+
+       // driver.quit();
     }
 }

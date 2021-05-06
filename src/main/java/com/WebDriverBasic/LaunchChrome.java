@@ -16,5 +16,8 @@ public class LaunchChrome {
 
         // launch Real Browser
         driver=new ChromeDriver();
+
+        // Window Maximize
+        driver.manage().window().maximize();
     }
 }
