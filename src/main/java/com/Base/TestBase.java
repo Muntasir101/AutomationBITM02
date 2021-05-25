@@ -36,7 +36,12 @@ public class TestBase {
     }
 
     public static void pageLoadWait(int Second){
+
         driver.manage().timeouts().pageLoadTimeout(Second,TimeUnit.SECONDS);
+    }
+
+    public static void ThreadSleep(int Second) throws InterruptedException {
+        Thread.sleep(Second);
     }
 
     public static void scrollToBottom(){
