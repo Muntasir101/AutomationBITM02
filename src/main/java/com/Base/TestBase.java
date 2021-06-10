@@ -1,11 +1,13 @@
 package com.Base;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
@@ -49,8 +51,39 @@ public class TestBase {
                 executeScript("window.scrollTo(0,document.body.scrollHeight)");
     }
 
+    public static void PageScreenshot(WebDriver driver,String Name) {
+        //Take Screenshot
+        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-    public static void closeBrowser(){
-        driver.quit();
+        //Save Image
+        try {
+            FileUtils.copyFile(srcFile, new File(System.getProperty("user.dir") + "//src//main//ScreenShots//" + Name + ".jpg"), true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
+    public static void elementHighlightScreenshot(WebDriver driver,WebElement element,String Name) throws InterruptedException {
+
+        JavascriptExecutor jse=(JavascriptExecutor) driver;
+        //Highlight Element with red border 3px
+        jse.executeScript("arguments[0].style.border='5px solid red'",element);
+        Thread.sleep(3000);
+
+        //Take Screenshot
+        File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+        //save image
+        try {
+            FileUtils.copyFile(srcFile,new File(System.getProperty("user.dir")+"//src//main//ScreenShots//"+Name +".jpg"),true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+        public static void closeBrowser () {
+            driver.quit();
+        }
+
+
 }
