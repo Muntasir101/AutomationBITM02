@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestNG Basic Test Automation"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="28.204">
+  <properties />
+  
+  
+            <testcase name="loginTest" time="6.462" classname="com.TestNGDemo.DataProviderTest" />
+                <testcase name="loginTest" time="7.802" classname="com.TestNGDemo.DataProviderTest" />
+                <testcase name="loginTest" time="7.431" classname="com.TestNGDemo.DataProviderTest" />
+                <testcase name="loginTest" time="6.509" classname="com.TestNGDemo.DataProviderTest" />
+      
+</testsuite>

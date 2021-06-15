@@ -25,21 +25,81 @@ td,th {border:1px solid #009;padding:.25em .5em}
 <body>
 <table cellspacing="0" cellpadding="0" class="testOverview">
 <tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">TestNG Basic Test Automation</a></td><td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi">0</td><td class="numi">26.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">TestNG Basic Test Automation</a></td><td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi">0</td><td class="numi">36.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr id="t1"><th colspan="5">TestNG Basic Test Automation &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="2">com.TestNGDemo.BasicTestNG</td><td><a href="#m1"><b>testCase_001</b>  </a></td><td class="numi">1</td><td>1623565048258</td><td class="numi">7085</td></tr><tr class="passedodd"><td><a href="#m2"><b>testCase_002</b>  ("This is Test case 002")</a></td><td class="numi">1</td><td>1623565040432</td><td class="numi">7818</td></tr>
-<tr class="passedeven"><td rowspan="2">com.TestNGDemo.BasicTestNG2</td><td><a href="#m3"><b>testCase_004</b>  ("This is Test case 004")</a></td><td class="numi">1</td><td>1623565055344</td><td class="numi">4925</td></tr><tr class="passedeven"><td><a href="#m4"><b>testCase_003</b>  </a></td><td class="numi">1</td><td>1623565060273</td><td class="numi">6376</td></tr>
+<tr class="passedodd"><td rowspan="4">com.TestNGDemo.DataProviderTest</td><td><a href="#m1"><b>loginTest</b>  </a></td><td class="numi">4</td><td>1623738687210</td><td class="numi">28209</td></tr><tr class="passedodd"><td><a href="#m2"><b>loginTest</b>  </a></td><td class="numi">4</td><td>1623738687210</td><td class="numi">28209</td></tr><tr class="passedodd"><td><a href="#m3"><b>loginTest</b>  </a></td><td class="numi">4</td><td>1623738687210</td><td class="numi">28209</td></tr><tr class="passedodd"><td><a href="#m4"><b>loginTest</b>  </a></td><td class="numi">4</td><td>1623738687210</td><td class="numi">28209</td></tr>
 </table>
 <h1>TestNG Basic Test Automation</h1>
-<h2 id="m1">com.TestNGDemo.BasicTestNG:testCase_001</h2>
+<h2 id="m1">com.TestNGDemo.DataProviderTest:loginTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>mail22@test.com</td>
+<td>123456</td>
+<td>Invalid</td>
+</tr>
+<tr><td colspan="3">
+Open Login page.<br/>
+mail22@test.com Type in Email Field.<br/>
+123456 Type in Email Field.<br/>
+Click on Login Button.<br/>
+Test PASSED for Invalid Input.<br/>
+...........................<br/>
+</td></tr>
+</table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">com.TestNGDemo.BasicTestNG:testCase_002</h2>
+<h2 id="m2">com.TestNGDemo.DataProviderTest:loginTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>mail@mail.com</td>
+<td>admin123</td>
+<td>Invalid</td>
+</tr>
+<tr><td colspan="3">
+Open Login page.<br/>
+mail@mail.com Type in Email Field.<br/>
+admin123 Type in Email Field.<br/>
+Click on Login Button.<br/>
+Test PASSED for Invalid Input.<br/>
+...........................<br/>
+</td></tr>
+</table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">com.TestNGDemo.BasicTestNG2:testCase_004</h2>
+<h2 id="m3">com.TestNGDemo.DataProviderTest:loginTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>user101@gmail.com</td>
+<td>123456</td>
+<td>Valid</td>
+</tr>
+<tr><td colspan="3">
+Open Login page.<br/>
+user101@gmail.com Type in Email Field.<br/>
+123456 Type in Email Field.<br/>
+Click on Login Button.<br/>
+Test PASSED for Valid Input.<br/>
+...........................<br/>
+<br><img src='F:\Training\PeopleNTech\BITM Batch 2\TestAutomation\src\main\ScreenShots\Demo.jpg'height='300' width='300'/<br><br/>
+</td></tr>
+</table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">com.TestNGDemo.BasicTestNG2:testCase_003</h2>
+<h2 id="m4">com.TestNGDemo.DataProviderTest:loginTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>testuser@gmail.com</td>
+<td>user123</td>
+<td>Invalid</td>
+</tr>
+<tr><td colspan="3">
+Open Login page.<br/>
+testuser@gmail.com Type in Email Field.<br/>
+user123 Type in Email Field.<br/>
+Click on Login Button.<br/>
+Test PASSED for Invalid Input.<br/>
+...........................<br/>
+</td></tr>
+</table>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

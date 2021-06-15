@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestNG Basic Test Automation"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="12.346">
+  <properties />
+  
+  
+            <testcase name="testCase_004" time="4.397" classname="com.TestNGDemo.BasicTestNG2" />
+                <testcase name="testCase_003" time="7.949" classname="com.TestNGDemo.BasicTestNG2" />
+      
+</testsuite>
