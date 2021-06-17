@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestNG Basic Test Automation"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="25.244">
+  <properties />
+  
+  
+            <testcase name="loginTest" time="25.244" classname="com.DataDriven.DD_LoginTest" />
+      
+</testsuite>
